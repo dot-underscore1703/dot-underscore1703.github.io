@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <meta charset="UTF-8">
         <title>Dus: The Website | DoomVer</title>
         <meta property="og:title" content="Dus: The Website">
         <meta property="og:description" content="DoomVer: True versioning disaster.">
         <meta property="og:type" content="website">
-        
         <meta property="og:url" content="https://dot-underscore1703.github.io/badversions/">
-        <link rel="stylesheet" href="../style.css">
+
+        <link rel="stylesheet" href="/css/style.css">
     </head>
+
     <body>
         <h1>Doomsday Versioning (DoomVer) Specification Version 9.9.8</h1>
         <h2>True versioning disaster.</h2>
@@ -36,9 +38,12 @@
             </p>
             <p>
                 Your software begins development at version 9.9.9, rather than SemVers 0.1.0.<br>
-                You may not give your software any additional labels or build metadata as extensions to the MAJOR.MINOR.PATCH format.<br>
+                You may not give your software any additional labels or build metadata as extensions to the
+                MAJOR.MINOR.PATCH format.<br>
                 All versions must strictly follow NUMBER.NUMBER.NUMBER.
-                Unlike how SemVer says versions before release 1.0.0 are "development" versions and may bring incompatible changes at any time, DoomVer does not have these phases and updates of any kind MUST follow the spec.
+                Unlike how SemVer says versions before release 1.0.0 are "development" versions and may bring
+                incompatible changes at any time, DoomVer does not have these phases and updates of any kind MUST follow
+                the spec.
             </p>
         </div>
 
@@ -52,8 +57,10 @@
                 3. PATCH version number when you make backward compatible bug fixes.
             </p>
             <p>
-                From initial release (9.9.9), if any number (being any of MAJOR, MINOR, PATCH) reaches 0, no more updates of that type may be made.
-                However, like SemVer, when you go from MINOR release 9 to MINOR release 8, your PATCH number will be reset. Same applies to MAJOR release resetting both MINOR number and PATCH number.
+                From initial release (9.9.9), if any number (being any of MAJOR, MINOR, PATCH) reaches 0, no more
+                updates of that type may be made.
+                However, like SemVer, when you go from MINOR release 9 to MINOR release 8, your PATCH number will be
+                reset. Same applies to MAJOR release resetting both MINOR number and PATCH number.
                 This will give you 9 PATCHes per MINOR release, and 9 MINORs per MAJOR release.
                 However, when you reach version 0.0.0, the doomsday clock has finished.
                 No more new updates or maintenance may be made to the project, and it is to be archived.
@@ -66,38 +73,49 @@
         </div>
         <div>
             <p>
-                The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in <a href="https://tools.ietf.org/html/rfc2119">RFC 2119</a>.
+                The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”,
+                “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in <a
+                    href="https://tools.ietf.org/html/rfc2119">RFC 2119</a>.
             </p>
             <p>
-                1. Software using Doomsday Versioning MUST declare a public API. The API could exist in the code, or strictly in documentation. It SHOULD be be precise and comprehensive.
+                1. Software using Doomsday Versioning MUST declare a public API. The API could exist in the code, or
+                strictly in documentation. It SHOULD be be precise and comprehensive.
             </p>
             <p>
-                2. A normal version number following the Doomsday Versioning Specification MUST be composed of three non-negative integers that MUST NOT contain leading zeroes like X.Y.Z.
-                Where X is the MAJOR version, Y is the MINOR version and Z is the PATCH version. Version components MUST only decrease and MUST NOT increase.
+                2. A normal version number following the Doomsday Versioning Specification MUST be composed of three
+                non-negative integers that MUST NOT contain leading zeroes like X.Y.Z.
+                Where X is the MAJOR version, Y is the MINOR version and Z is the PATCH version. Version components MUST
+                only decrease and MUST NOT increase.
             </p>
             <p>
                 3. Once a versioned package has been released publicly, that package MUST NOT be modified afterwards.
-                Any change or new feature afterwards MUST be in its own versioned package, where the corresponding version number MUST decrement.
+                Any change or new feature afterwards MUST be in its own versioned package, where the corresponding
+                version number MUST decrement.
             </p>
             <p>
-                4. Version 0.0.0 defines the completed API. The API MUST NOT be updated any further in any way afterwards and the API SHOULD be archived.
+                4. Version 0.0.0 defines the completed API. The API MUST NOT be updated any further in any way
+                afterwards and the API SHOULD be archived.
             </p>
             <p>
                 5. Version 9.9.9 defines the initial release. The API SHOULD be ready for initial release.
             </p>
             <p>
-                6. PATCH version Z (x.y.Z) MUST be decremented if only backwards compatible bug fixes are introduced. 
-                A bug fix is defined as an internal change that rectifies or solves an unexpected issue the previous release had.
+                6. PATCH version Z (x.y.Z) MUST be decremented if only backwards compatible bug fixes are introduced.
+                A bug fix is defined as an internal change that rectifies or solves an unexpected issue the previous
+                release had.
             </p>
             <p>
-                7. MINOR version Y (x.Y.z) MUST be decremented if only backwards compatible API changes or features have been introduced.
+                7. MINOR version Y (x.Y.z) MUST be decremented if only backwards compatible API changes or features have
+                been introduced.
                 It MUST be decremented if any public API functionality is marked as deprecated.
                 It MAY include patch level changes.
                 Patch version MUST reset to 9 when minor version is decremented.
             </p>
             <p>
-                8. MAJOR version X (X.y.z) MUST be decremented if non-backwards compatible changes have been made to the API in any way.
-                It MAY also include minor or patch level changes. Patch and minor versions MUST be reset to 9 when MAJOR version is decremented.
+                8. MAJOR version X (X.y.z) MUST be decremented if non-backwards compatible changes have been made to the
+                API in any way.
+                It MAY also include minor or patch level changes. Patch and minor versions MUST be reset to 9 when MAJOR
+                version is decremented.
             </p>
         </div>
         <div>
@@ -140,10 +158,11 @@
         </div>
         <div class="bottom-banner">
             <p>
-                <a href="../index.html">Home</a>
-                <a href="index.html">Bad versioning</a>
-                <a href="../rambles/index.html">Rambles</a>
+                <a href="/index.html">Home</a>
+                <a href="/badversions/index.html">Bad versioning</a>
+                <a href="/rambles/index.html">Rambles</a>
             </p>
         </div>
     </body>
+
 </html>
